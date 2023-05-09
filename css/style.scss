@@ -321,6 +321,113 @@ body {
     }
 }
 
+.product-wrap {
+    margin-bottom: 120px;
+
+    .product-wrap__heading {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        text-align: center;
+        color: $black-brown;
+        margin-bottom: 24px;
+    }
+
+    .product-items {
+        position: relative;
+        width: 100%;
+        height: 500px;
+
+        .product-items__img {
+            position: absolute;
+            width: 100%;
+            height: 500px;
+            z-index: 1;
+
+            & > img {
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+
+                &:hover {
+                    width: 150%;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+
+        .product-items__content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+
+            h4 {
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 86px;
+                color: $white;
+                white-space: nowrap;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 21px;
+                line-height: 34px;
+                color: $white;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.library-wrap {
+    .library-wrap__heading {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        text-align: center;
+        color: $black-brown;
+        margin-bottom: 24px;
+    }
+
+    .library__item {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+
+        &.library__item--sub {
+            width: 100%;
+            height: 230px;
+            overflow: hidden;
+            margin-bottom: 24px;
+
+            & > img {
+                width: 100%;
+                height: 230px;
+                object-fit: cover;
+
+                &:hover {
+                    width: 150%;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+
+        & > img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+
+            &:hover {
+                width: 150%;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}
+
 footer {
     .footer-wrap {
         width: 100%;

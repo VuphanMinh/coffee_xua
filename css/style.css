@@ -261,6 +261,100 @@ body {
   color: #403C39;
 }
 
+.product-wrap {
+  margin-bottom: 120px;
+}
+.product-wrap .product-wrap__heading {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #403C39;
+  margin-bottom: 24px;
+}
+.product-wrap .product-items {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+.product-wrap .product-items .product-items__img {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  z-index: 1;
+}
+.product-wrap .product-items .product-items__img > img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-wrap .product-items .product-items__img > img:hover {
+  width: 150%;
+  transition: all 0.5s ease;
+}
+.product-wrap .product-items .product-items__content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.product-wrap .product-items .product-items__content h4 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 86px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+.product-wrap .product-items .product-items__content p {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 34px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.library-wrap .library-wrap__heading {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #403C39;
+  margin-bottom: 24px;
+}
+.library-wrap .library__item {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+.library-wrap .library__item.library__item--sub {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.library-wrap .library__item.library__item--sub > img {
+  width: 100%;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.library-wrap .library__item.library__item--sub > img:hover {
+  width: 150%;
+  transition: all 0.5s ease;
+}
+.library-wrap .library__item > img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.library-wrap .library__item > img:hover {
+  width: 150%;
+  transition: all 0.5s ease;
+}
+
 footer .footer-wrap {
   width: 100%;
   height: 100%;
