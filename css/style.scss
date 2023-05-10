@@ -152,6 +152,18 @@ body {
         z-index: 2;
         padding: 20px 0;
 
+        .navbar-toggler__light {
+            color: $white !important;
+            border: none;
+        }
+
+        @include res_for(sp) {  
+            background-image: none;
+            background-color: $brown;
+            z-index: 10;
+            padding: 10px 0;
+        }
+
         .navbar-custom {
             width: 100%;
             display: flex;
@@ -161,7 +173,11 @@ body {
             .navbar-custom__logo {
                 height: 80px;
                 object-fit: cover;
-        
+                
+                @include res_for(sp) { 
+                    height: 40px;
+                }
+
                 & > img {
                     height: 80px;
         
@@ -188,6 +204,10 @@ body {
                     }
         
                     &.hotline {
+                        @include res_for(sp) { 
+                            padding: 10px 0;
+                        }
+
                         &:hover {
                             border-bottom: none;
                             background: #C67315;
@@ -231,6 +251,14 @@ body {
                 line-height: 86px;
                 color: $white;
                 margin-bottom: 40px;
+
+                @include res_for(sp) {  
+                    font-weight: 700;
+                    font-size: 40px;
+                    line-height: 60px;
+                    color: $white;
+                    margin-bottom: 20px;
+                }
             }
 
             p {
@@ -275,6 +303,11 @@ body {
     width: 100%;
     position: relative;
     padding: 120px 0;
+    overflow: hidden;
+
+    @include res_for(sp) {  
+        padding: 80px 0;
+    }
 
     .about-wrap__retange {
         &::after {
@@ -292,6 +325,13 @@ body {
         position: absolute;
         right: 0px;
         top: 0px;
+
+        @include res_for(sp) {  
+            right: -100px;
+            top: 0px;
+            z-index: -1;
+            opacity: 0.5;
+        }
     }
 
     &::before {
@@ -299,6 +339,13 @@ body {
         position: absolute;
         left: 0px;
         top: 0px;
+
+        @include res_for(sp) {  
+            left: -100px;
+            top: 0px;
+            z-index: -1;
+            opacity: 0.5;
+        }
     }
 
     h2 {
@@ -309,6 +356,11 @@ body {
         line-height: 86px;
         color: $black-brown;
         text-align: center;
+
+        @include res_for(sp) {  
+            font-size: 30px;
+            line-height: 46px;
+        }
     }
 
     p {
@@ -318,11 +370,20 @@ body {
         line-height: 34px;
         text-align: center;
         color: $black-brown;
+
+        @include res_for(sp) {  
+            font-size: 18px;
+            line-height: 26px;
+        }
     }
 }
 
 .product-wrap {
     margin-bottom: 120px;
+
+    @include res_for(sp) {  
+        margin-bottom: 40px;
+    }
 
     .product-wrap__heading {
         font-weight: 700;
@@ -331,6 +392,12 @@ body {
         text-align: center;
         color: $black-brown;
         margin-bottom: 24px;
+
+        @include res_for(sp) {  
+            font-size: 30px;
+            line-height: 46px;
+            margin-top: 20px;
+        }
     }
 
     .product-items {
@@ -352,6 +419,10 @@ body {
                 &:hover {
                     width: 150%;
                     transition: all 0.5s ease;
+
+                    @include res_for(sp) {  
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -369,6 +440,11 @@ body {
                 line-height: 86px;
                 color: $white;
                 white-space: nowrap;
+
+                @include res_for(sp) {  
+                    font-size: 20px;
+                    line-height: 36px;
+                }
             }
 
             p {
@@ -377,6 +453,11 @@ body {
                 line-height: 34px;
                 color: $white;
                 text-align: center;
+
+                @include res_for(sp) {  
+                    font-size: 16px;
+                    line-height: 26px;
+                }
             }
         }
     }
@@ -390,12 +471,24 @@ body {
         text-align: center;
         color: $black-brown;
         margin-bottom: 24px;
+
+        @include res_for(sp) {  
+            font-size: 30px;
+            line-height: 46px;
+            margin-top: 20px;
+        }
     }
 
     .library__item {
         width: 100%;
         height: 500px;
         overflow: hidden;
+
+        @include res_for(sp) {  
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
 
         &.library__item--sub {
             width: 100%;
@@ -411,6 +504,11 @@ body {
                 &:hover {
                     width: 150%;
                     transition: all 0.5s ease;
+
+                    @include res_for(sp) {  
+                        width: 100%;
+                        height: auto;
+                    }
                 }
             }
         }
@@ -420,9 +518,19 @@ body {
             height: 500px;
             object-fit: cover;
 
+            @include res_for(sp) {  
+                width: 100%;
+                height: auto;
+            }
+
             &:hover {
                 width: 150%;
                 transition: all 0.5s ease;
+
+                @include res_for(sp) {  
+                    width: 100%;
+                    height: auto;
+                }
             }
         }
     }
@@ -439,6 +547,10 @@ footer {
         background-repeat: repeat;
         padding-top: 80px;
 
+        @include res_for(sp) {  
+            background-size: auto;
+        }
+
         .footer-wrap__contact {
             width: 100%;
             display: flex;
@@ -448,12 +560,22 @@ footer {
             color: $white;
             margin-bottom: 180px;
 
+            @include res_for(sp) {  
+                margin-bottom: 120px;
+            }
+
             h3 {
                 font-weight: 700;
                 font-size: 40px;
                 line-height: 48px;
                 text-align: center;
                 margin-bottom: 20px;
+
+                @include res_for(sp) {  
+                    font-size: 30px;
+                    line-height: 46px;
+                    margin-top: 20px;
+                }
             }
 
             p {
@@ -462,11 +584,22 @@ footer {
                 line-height: 27px;
                 text-align: center;
                 margin-bottom: 40px;
+
+                @include res_for(sp) {  
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-top: 10px;
+                }
             }
 
             a.hotline {
                 width: 680px;
                 padding: 20px 0;
+
+                @include res_for(sp) {  
+                    width: 80%;
+                    padding: 10px 0;
+                }
             }
         }
 
@@ -480,11 +613,21 @@ footer {
             background-repeat: no-repeat;
             padding-top: 180px;
 
+            @include res_for(sp) { 
+                height: auto;
+            }
+
             &::after {
                 content: url('../img/images/box-coffee.png');
                 position: absolute;
                 right: 100px;
                 top: -100px;
+
+                @include res_for(sp) { 
+                    content: url('../img/images/box-coffee-mobile.png');
+                    top: -80px;
+                    right: 80px;
+                }
             }
 
             .info_heading {
@@ -498,6 +641,10 @@ footer {
             .info__logo {
                 width: 214px;
                 height: 137px;
+
+                @include res_for(sp) { 
+                    margin-bottom: 20px;
+                }
 
                 & > img {
                     width: 100%;
@@ -552,6 +699,13 @@ footer {
                 line-height: 33px;
                 color: $white;
                 margin-top: 80px;
+
+                @include res_for(sp) { 
+                    font-size: 14px;
+                    line-height: 22px;
+                    text-align: center;
+                    padding-bottom: 20px;
+                }
             }
         }
     }
